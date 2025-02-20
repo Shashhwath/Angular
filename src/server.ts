@@ -16,7 +16,7 @@ const commonEngine = new CommonEngine();
  * Example Express Rest API endpoints can be defined here.
  * Uncomment and define endpoints as necessary.
  *
- * Example:
+ * Example: 
  * ```ts
  * app.get('/api/**', (req, res) => {
  *   // Handle API request

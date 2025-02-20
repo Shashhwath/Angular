@@ -1,0 +1,24 @@
+<div class="header">
+    <h1>Product Details</h1>
+</div>
+
+<div class="body">
+    <h3>{{ selectedProduct ? 'Edit Product' : 'Add Product' }}</h3>
+    <form [formGroup]="ProductDetails" (submit)="onSubmit()">
+        <label for="ProductName">Enter the ProductName</label>
+        <input type="text" formControlName="product_name" placeholder="Eg: Hp Pavilion">
+        <label>Enter the ProductPrice</label>
+        <input type="number" formControlName="product_price" placeholder="Eg: 60000">
+        <button type="submit">
+            {{ selectedProduct ? 'Update Product' : 'Add Product' }}
+          </button>
+       
+    </form>
+</div>
+<ul>
+    <li *ngFor="let product of products">
+        <strong>{{ product.product_name }}</strong> - Rs {{ product.product_price }}
+        <button (click)="editProduct(product)"><i class="fa-solid fa-pencil"></i></button>
+        <button (click)="deleteProduct(product.product_id)"><i class="fa-solid fa-trash"></i></button>
+    </li>
+</ul>
