@@ -4,4 +4,7 @@
 @tailwind component;
 @tailwind utilities;
 
-
+.table-auto
+{
+table-layout: auto;
+}

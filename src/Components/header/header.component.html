@@ -1,20 +1,24 @@
 <div class="header">
-    <h1>Product Details</h1>
+    <h1 class="text-3xl">Product Details</h1>
 </div>
 
-<div class="body">
-    <h3>{{ selectedProduct ? 'Edit Product' : 'Add Product' }}</h3>
+<div class="product-container"><div class="snap-center1">
+    <h3 class="title">{{ selectedProduct ? 'Edit Product' : 'Add Product' }}</h3>
     <form [formGroup]="ProductDetails" (submit)="onSubmit()">
         <label for="ProductName">Enter the ProductName</label>
-        <input type="text" formControlName="product_name" placeholder="Eg: Hp Pavilion">
+        <input class="border-2 border-inherit" type="text" formControlName="product_name" placeholder="Eg: Hp Pavilion">
         <label>Enter the ProductPrice</label>
-        <input type="number" formControlName="product_price" placeholder="Eg: 60000">
+        <input class="border-inherit" type="number" formControlName="product_price" placeholder="Eg: 60000">
         <button type="submit">
             {{ selectedProduct ? 'Update Product' : 'Add Product' }}
           </button>
        
     </form>
-</div>
+
+</div></div>
+
+
+
 <ul>
     <li *ngFor="let product of products">
         <strong>{{ product.product_name }}</strong> - Rs {{ product.product_price }}
